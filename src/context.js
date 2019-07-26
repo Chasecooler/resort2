@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 
 const RoomContext = React.createContext()
 
-export default class RoomProvider extends Component {
+// export default
+class RoomProvider extends Component {
     render() {
         return (
         <RoomContext.Provider value="hello">
@@ -11,3 +12,8 @@ export default class RoomProvider extends Component {
         );
     }
 }
+
+
+const RoomConsumer = RoomContext.Consumer;
+
+export { RoomProvider, RoomConsumer, RoomContext };
